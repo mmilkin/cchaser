@@ -1,8 +1,6 @@
-
 # -*- coding: utf-8 -*-
 """
     An example of how to controls an RC Car with a raspberry pi
-    :license: BSD, see LICENSE for more details.
 """
 from flask.ext.login import login_required, current_user, login_user, logout_user
 from flask import g, jsonify
