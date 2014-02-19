@@ -1,0 +1,8 @@
+alembic==0.6.3
+flask==0.10.1
+flask-login
+flask-sqlalchemy==0.16
+flask-wtf==0.8.4
+mock==1.0.1
+passlib==1.6.2
+sqlalchemy==0.7.9

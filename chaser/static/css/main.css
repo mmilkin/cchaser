@@ -1,0 +1,90 @@
+.login-nav {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding-right: 10px;
+}
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    width: 752px;
+    height: 752px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+}
+.title {
+    text-align: center;
+}
+.login-form {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    width: 600px;
+}
+
+.login-form dl {
+    padding-left: 50px;
+    display: block;
+}
+
+.login-form dt {
+    width: 50px; clear:left
+}
+
+.login-form dd {
+    width: 300px;
+}
+
+.login-form dt, dd {
+    float:left;
+}
+
+.fields {
+    height: 50px;
+}
+.submit-actions {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.button {
+    padding:5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    color:#000;
+    text-decoration:none;
+}
+
+#state {
+    display: block;
+    height: 48px;
+    width: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#state.left {
+    background-image:url('img/left.png');
+}
+
+#state.right {
+    background-image:url('img/right.png');
+}
+#state.forward {
+    background-image:url('img/forward.png');
+}
+#state.backwards {
+    background-image:url('img/backwards.png');
+}
+#state.stopped {
+    background-image:url('img/stop.png');
+}
+
