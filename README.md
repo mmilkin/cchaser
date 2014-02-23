@@ -14,10 +14,9 @@ Video Streaming:
 Environment
 -----------
 It is highly recommended to use a virtualenv
-    ```
+```
     pip install -r requirements.txt
-
-    ```
+```
 Enable the RaspberryPie camera, and stream video from raspberry pie, using mjpeg or streaming service of your preference.
     _A good tutorial on how to do this can be found [here](http://blog.oscarliang.net/webcam-streaming-video-raspberry-pi-via-browser)_
 
@@ -31,11 +30,14 @@ Settings
 
 Running
 -------
-How to start server:
+**How to start server:**
+```
     python run.py
         -p --port       :default = 8000
         -o --host       :default = localhost
         -t --threads    :default = False (If you want to be able serve multiple requests)
-
-How to add a user:
+```
+**How to add a user:**
+```
     python add_user.py
+```
