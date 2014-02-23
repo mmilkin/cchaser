@@ -1,6 +1,6 @@
 #Cat Chaser
 
-This projects primary purpose is to be a simple app that runs on Raspberry Pie to control a modified remote control car to chase cats.
+This projects primary purpose is to be a simple app that runs on Raspberry Pi to control a modified remote control car to chase cats.
 
 This projects secondary purpose is to provide an example of how one might integrate a flask app with the GPIO pins of a Raspberry Pie.
 To control two independent DC motors while streaming 'live' video.
