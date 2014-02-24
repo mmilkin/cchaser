@@ -8,7 +8,7 @@ SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, '../migrations')
 ADMINS = ['redawn']
 
 # Raspberry Pi address
-PIE_ADDRESS = '192.168.1.1'
+PI_ADDRESS = '192.168.1.1'
 IMG_PORT = '8080'
 
 CSRF_ENABLED = True
