@@ -5,10 +5,10 @@ This projects primary purpose is to be a simple app that runs on Raspberry Pi to
 This projects secondary purpose is to provide an example of how one might integrate a flask app with the GPIO pins of a Raspberry Pi.
 To control two independent DC motors while streaming 'live' video.
 
-Pin Settup and wiring
+Pin settup and wiring
 ----------
-PIN 4, 17 should be wired to the inputs of a microcontroller attached to DC (Driving Motor)
-PIN 24, 25 should be wired to the inputs of a microcontroller attached to DC (Turning Motor)
+    PIN 4, 17 should be wired to the inputs of a microcontroller attached to DC (Driving Motor)
+    PIN 24, 25 should be wired to the inputs of a microcontroller attached to DC (Turning Motor)
 
 A good simple motor controller [L293D](http://www.ti.com/lit/ds/symlink/l293d.pdf)
 
