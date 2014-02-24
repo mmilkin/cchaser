@@ -5,11 +5,12 @@ This projects primary purpose is to be a simple app that runs on Raspberry Pi to
 This projects secondary purpose is to provide an example of how one might integrate a flask app with the GPIO pins of a Raspberry Pi.
 To control two independent DC motors while streaming 'live' video.
 
-External dependencies:
-    Video: ffmpeg
+Pin Settup and wiring
+----------
+PIN 4, 17 should be wired to the inputs of a microcontroller attached to DC (Driving Motor)
+PIN 24, 25 should be wired to the inputs of a microcontroller attached to DC (Turning Motor)
 
-Video Streaming:
-  To enable video streaming to the flask application the Raspberry Pi needs to serve the stream on a port and address specified in the settings.py.
+A good simple motor controller [L293D](http://www.ti.com/lit/ds/symlink/l293d.pdf)
 
 Environment
 -----------
@@ -23,10 +24,11 @@ Enable the Raspberry Pi camera, and stream video from Raspberry Pi, using mjpeg 
 
 Settings
 --------
-    Make Sure that the RPi.GPIO module is accesable *if it is not then the stub module will be used*
-    PI_ADDRESS: the external address of the Raspberry Pi used for streaming video
-    IMG_PORT: the port of the streaming service (ffmpeg)
-
+Make Sure that the RPi.GPIO module is accesable *if it is not then the stub module will be used, and your motors won't spin*
+```
+PI_ADDRESS: the external address of the Raspberry Pi used for streaming video
+IMG_PORT: the port of the streaming service (ffmpeg)
+```
 
 Running
 -------
