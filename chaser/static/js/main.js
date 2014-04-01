@@ -4,8 +4,6 @@ function runServer() {
 
     var keys = [38, 40, 37, 39];
     $(document).keydown(function (event) {
-        console.log(event.which);
-        console.log($.inArray( event.which, keys ));
         if ( $.inArray( event.which, keys ) >= 0 ) {
             $.post('/control', { key: event.which });
         }
