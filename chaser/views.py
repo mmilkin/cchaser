@@ -73,7 +73,7 @@ def _game_control():
     try:
         motor_controller.motor(key)
     except MotorInputError:
-        return jsonify({ "error": "Bad input {0}".format(key)}), 400
+        return jsonify({"error": "Bad input {0}".format(key)}), 400
     return '', 200
 
 

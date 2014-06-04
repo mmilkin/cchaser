@@ -20,7 +20,9 @@ HOST = '0.0.0.0'
 DEBUG = True
 
 try:
-    io = __import__('RPi.GPIO')
+    io_mod = __import__('RPi.GPIO')
+    io = io_mod.GPIO
 except ImportError:
     print 'could not import RPi.GPIO using stubIO'
-    from chaser.stub_io import GPIO as io
+    from stub_io import GPIO as io
+

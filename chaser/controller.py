@@ -15,6 +15,8 @@ DOWN_KEY = u'40'
 # lock for the controller
 io_lock = RLock()
 
+gpio.setmode(gpio.BCM)
+
 CONTROLLER_STATES = {
     'stopped': 'stopped',
     UP_KEY: 'forward',
@@ -50,6 +52,12 @@ class MotorController(object):
 
             self.progress_keys = set()
             self.turn_keys = set()
+
+    @property
+    def state(self):
+        with io_lock:
+            global _STATE
+            return _STATE
 
     def shut_down(self):
         with io_lock:
@@ -117,20 +125,14 @@ class MotorController(object):
                     pass
 
                 self.__run(in1_pin, in2_pin)
-                _STATE = CONTROLLER_STATES.get(key, 'stopped')
-
-    @property
-    def state(self):
-        with io_lock:
-            global _STATE
-            return _STATE
+                _STATE = CONTROLLER_STATES[key]
 
     def motor(self, key):
         """
         :param key: One of the following keys [u'37', u'38' u'39' u'40']
         If its any other parameter it will be ignored.
         """
-        if key == UP_KEY:
+        if key is UP_KEY:
             self.forward()
         elif key == DOWN_KEY:
             self.reverse()

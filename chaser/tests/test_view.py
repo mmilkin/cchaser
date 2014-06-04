@@ -11,7 +11,7 @@ class ViewsTestCase(unittest.TestCase):
         from chaser import app
         self.client = app.test_client(use_cookies=True)
 
-    @patch('chaser.views.controller')
+    @patch('chaser.views.motor_controller')
     @patch('chaser.views.jsonify')
     def test_get_state(self, jsonify, controller):
         controller.state = 'OTHER'
@@ -21,7 +21,7 @@ class ViewsTestCase(unittest.TestCase):
         self.assertEqual(value, (json.dumps(expected), 200))
         jsonify.assert_called_with(expected)
 
-    @patch('chaser.views.controller')
+    @patch('chaser.views.motor_controller')
     @patch('chaser.views.request')
     def test_game_control(self, request, controller):
         request.form = {'key': 'value'}
@@ -29,7 +29,7 @@ class ViewsTestCase(unittest.TestCase):
         controller.motor.assert_called_with('value')
         self.assertEqual(response, ('', 200))
 
-    @patch('chaser.views.controller')
+    @patch('chaser.views.motor_controller')
     @patch('chaser.views.request')
     @patch('chaser.views.jsonify')
     def test_game_control_error(self, jsonify, request, controller):

@@ -7,8 +7,8 @@ To control two independent DC motors while streaming 'live' video.
 
 Pin settup and wiring
 ----------
-    PIN 4, 17 should be wired to the inputs of a microcontroller attached to DC (Driving Motor)
-    PIN 24, 25 should be wired to the inputs of a microcontroller attached to DC (Turning Motor)
+    PIN 4, 17 should be wired to the inputs of a micro-controller attached to DC (Driving Motor)
+    PIN 24, 25 should be wired to the inputs of a micro-controller attached to DC (Turning Motor)
 
 A good simple motor controller [L293D](http://www.ti.com/lit/ds/symlink/l293d.pdf)
 
@@ -42,4 +42,8 @@ Running
 **How to add a user:**
 ```
     python add_user.py
+```
+**How to run tests:**
+```
+   nosetests
 ```
